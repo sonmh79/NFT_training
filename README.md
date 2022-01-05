@@ -71,7 +71,7 @@ NFT 이름, 설명, 이미지 링크, 특징 들을 담고 있는 json 문서이
   ```python
   nft = NFT()
   # nft.create_images()
-  # pinata에 생성된 images 폴더를 등록 후 링크와 프로젝트 이름을 IMAGE_BASE_URl과 PROJECT_NAME에 적어준다.
+  ``` pinata에 생성된 images 폴더를 등록 후 링크와 프로젝트 이름을 IMAGE_BASE_URl과 PROJECT_NAME에 적어준다. ```
   nft.create_metadata()
   ```
 
