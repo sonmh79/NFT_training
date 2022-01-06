@@ -49,11 +49,13 @@ NFT 이름, 설명, 이미지 링크, 특징 들을 담고 있는 json 문서이
 
 업로드 후, 만들어진 프로젝트의 링크는 `IMAGE_BASE_URL` 변수에 할당해준다. 
 
-예시) BASE_URL = https://gateway.pinata.cloud/ipfs/QmbrxDifGTVS9kDJscNjBJvU6a1Kb9REkhuMqBV9oE7k3H/
+예시) IMAGE_BASE_URL = https://gateway.pinata.cloud/ipfs/QmbrxDifGTVS9kDJscNjBJvU6a1Kb9REkhuMqBV9oE7k3H/
 (맨 뒤에 / 넣기)
 
 
-### 메타데이터 생성 (`create_metadata`)
+### 메타데이터 생성
+
+`nft.create_metadata()`
 
 1단계에서 만들어진 리스트 `all_images` 안의 이미지 정보들을 각각  json 파일로 변환한다.
 
@@ -61,7 +63,7 @@ NFT 이름, 설명, 이미지 링크, 특징 들을 담고 있는 json 문서이
 
 각 json 파일은 `이미지 링크 주소`, `id`, `이름`, `속성` 등을 담고 있다.
 
-만들어진 이미지 별 Json 파일을 또 다시 [Pinata](https://www.pinata.cloud)에 업로드한다.
+만들어진 이미지 별 Json 파일을 또 다 [Pinata](https://www.pinata.cloud)에 업로드한다.
 
 <img src="https://miro.medium.com/max/1400/1*8no0xmIMH4ZxN5A_CehE0A.png" />
 (이미지 json파일 예시)
@@ -69,13 +71,11 @@ NFT 이름, 설명, 이미지 링크, 특징 들을 담고 있는 json 문서이
 
 코드 사용 순서
   ```python
-  nft = NFT()
+  #nft = NFT()
   # nft.create_images()
   ``` pinata에 생성된 images 폴더를 등록 후 링크와 프로젝트 이름을 IMAGE_BASE_URl과 PROJECT_NAME에 적어준다. ```
   nft.create_metadata()
   ```
-
-
 
 ## 3. Smart Contract 에 올리기  
 ## 4. NFT 만들기
